@@ -1,37 +1,57 @@
-//Lesson 9 constructor
-//constructor is used to create objects
-const person = {
-    firstName:"Joe",
-    lastName :"Mama"
+//Object Prototype
+//Every object and function has its own 
+//inherent property called Protoype which 
+
+//A protoype itself has another object.
+//So the prototype has its own protype 
+// Prototype: In programming, a prototype is like
+//  a blueprint or template for creating objects. 
+// It defines the structure and behavior of an object.
+
+// Object: An object is a real instance created based on 
+// a prototype. It's like a building constructed 
+// based on a blueprint.
+
+// const person = {
+//     name: "Elon"
+// }
+// console.log(person);
+
+//Prototype inheritance
+function Person(fName,lName){
+    this.firstName = fName,
+    this.lastName = lName
 }
 
-function Person(first,last){
-    this.firstName = first
-    this.lastName = last
-    this.getFullName = function(){
-        return this.firstName + " " + this.lastName
-    }
+
+
+//Once we define the variables
+// in the constructor we are unable to add any 
+//other variables to the constructor using 
+//console.log(Person.age)
+//How to add variable to constructor 
+Person.prototype.age = 20;
+
+
+const person1 = new Person("Jason", "Toad");
+const person2 = new Person("Dick", "Grayson");
+
+console.log(person2)
+
+//How to add method to constructor 
+//The method is not added in Person 1 or Person 2 the 
+//person1 and and person2 are inherting the method from the protorype of the Person
+Person.prototype.getFullName = function(){
+    return this.firstName + " " + this.lastName;
 }
 
+console.log(person2.getFullName());
+/**
+ * This approach is important because it allows you to define methods and properties 
+ * that are shared among all instances of a particular type of object, rather than 
+ * duplicating them for each instance. 
+ * It helps save memory and makes your code more efficient and easier to maintain.
+ */
 
-const person1 = new Person("Jake","Austin");
-const person2 = new Person("Mark","Johnson");
 
-console.log(person1);
-console.log(person2);
 
-person1.age = 51
-console.log(person1);
-person2.greet = function(){
-    console.log("Hello Bro");
-}
-
-person2.greet();
-console.log(person1.getFullName());
-
-//Javascript Object Prototypes 
-const human = {
-    name:"James"
-}
-//We can use the Prototype to add properties and methods to a constructor function
-console.log(human)
