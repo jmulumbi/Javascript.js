@@ -1,0 +1,94 @@
+<!DOCTYPE html> <!--Document Type Node--->
+<html lang="en"></html><!--Element Type Node-->
+    <head>
+        <title>
+            Document Object Model
+        </title>
+    </head>
+    <body><!--Element Type Node-->
+        <div>
+            <p id="message">JavaScript DOM</p><!--Text Node-->
+        </div>
+
+        <div>
+            <input type="radio" name="language" value="JavaScript">
+            <input type="radio" name="language" value="Python">
+        </div>
+
+        <div>
+            <h1>First Heading</h1>
+            <h1>Second Heading</h1>
+            <h1>Third Heading</h1>
+            <h1>Fourth Heading</h1>
+        </div>
+
+        <div>
+            <div id="container">
+                <h1 class="msg">Second Heading</h1>
+                <h1 class="msg">Third Heading</h1>
+            </div>
+            
+            <h1 class="msg">First Heading</h1>
+        </div>
+
+        <div>
+            <div id="cont">
+                <h1 class="text">Second Heading</h1>
+                <h1 class="text">Third Heading</h1>
+            </div>
+            
+            <h1 class="text">First Heading</h1>
+        </div>
+
+        
+        
+    <script>
+        //1.getElementById()- returns an Element object that represents an 
+        //HTML element
+
+        //If there are elements with multiple elements 
+        //it will print the first element 
+        let msg = document.getElementById("message");
+        console.log(msg);
+
+        //2.getElementsByName- returns one list of nodes
+        let btn = document.getElementsByName("language");
+        console.log(btn);
+        //Output: NodeList(2) [input, input]
+
+        //3.getElementsByTagName() - accepts a tag name and returns 
+        //a live collection HTML collection of elements
+
+        let heading = document.getElementsByTagName("h1");
+        console.log(heading);
+        //Output: HTMLCollection(4) [h1, h1, h1, h1]
+
+        //getElementsByClassName-retruns an array like of object of the 
+        //child elements with a specified child name
+        let container = document.getElementById("container");
+        let message = container.getElementsByClassName("msg");
+        console.log(message);
+
+        //querySelector() - querySelectorAll() allows you to select the first element that
+        // matchess one or mpore CSS selector
+        let text = document.querySelector(".text");
+        console.log(text);
+        //Output: <h1 class="text">Second Heading</h1>
+
+        let cont = document.getElementById("cont");
+        let love = cont.querySelectorAll(".text");
+        console.log(love);
+        //let love = cont.querySelectorAll("#cont"); for ID 
+        //let love = cont.querySelectorAll("div h1"); selects the div and h1 elements
+
+        
+    </script>
+    </body>
+</html>
+
+<!--
+    Any node has a relationship to to other nodes in the 
+    DOM tree and it is same as described in the traditional family tree
+
+    Head and Body nodes are siblings 
+-->
