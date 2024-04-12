@@ -1,0 +1,30 @@
+body {
+    transition: background-color 0.3s;
+}
+
+.mode-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#toggle-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.dark-mode {
+    background-color: #222;
+    color: #fff;
+}
+
+.light-mode {
+    background-color: #fff;
+    color: #333;
+}
