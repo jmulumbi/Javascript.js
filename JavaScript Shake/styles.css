@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222;
+    margin: 0;
+}
+
+.wavy-text {
+    font-size: 48px;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    animation: wave 1s infinite;
+}
+
+.letter {
+    display: inline-block;
+    transform-origin: 50% 50%;
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
