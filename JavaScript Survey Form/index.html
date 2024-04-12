@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Survey Form</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1 id="title">Jeremiah Mulumbi's Survey Form</h1>
+    <p id="description">Thank you for taking your time to complete this survey</p>
+<form id="survey-form">
+
+  <fieldset>
+    <label id="name-label">What is your name?: <input type="text" id="name" required placeholder="John Doe"/></label>
+    <label id="email-label">What is your email?: <input type="email" id="email" required placeholder="johndoe@gmail.com"></label>
+    <label id="number-label">How old are you?: <input type="number" id="number" min="0" max="110" required placeholder="30"></label>
+    <label>Which best describes your role?:</label>
+    <select name="job">
+      <option value""">Select One Option</option>
+      <option value="1">Student</option>
+      <option value="2"">Full Time job</option>
+      <option value="3">Prefer Not to Say</option>
+      <option value="4">Other</option>
+    </select>
+  </fieldset>
+ 
+    
+  <fieldset>
+    <label>Would you reccomend my wesbite to other people?:<label/>
+    <label  name=""><input type="radio" name="rec" class="inline" value="1"/>Definitely</label>
+    <label><input type="radio" name="rec" class="inline" value="2"/>Maybe</label>
+    <label><input type="radio" name="rec" class="inline" value="3"/>Not Sure</label>
+    <label>What is your favorite feature on my website?</label>
+    <select id="dropdown">
+      <option value="">Please select one</option>
+      <option value="1">Challenges</option>
+      <option value="2">Projects</option>
+      <option value="3">Open Source</option>
+      <option value="4">Community</option>
+    </select>
+  </fieldset>
+
+  <fieldset>
+    <label >
+       What would you like to see improved? 
+    </label>
+    <label><input type="checkbox" class="inline" value="1"/> Front-end Projects</label>
+    <label><input type="checkbox" class="inline" value="2"/> Back-end Projects</label>
+    <label><input type="checkbox" class="inline" value="3"/> Data Visualisation</label>
+    <label><input type="checkbox" class="inline" value="4"/> Challenges</label>
+    <label><input type="checkbox" class="inline" value="5"/> Open Source </label>
+    <label><input type="checkbox" class="inline" value="6"/>Videos</label>
+    <label><input type="checkbox" class="inline" value="7"/> Form</label>
+    <label><input type="checkbox" class="inline" value="8"/>Support</label>
+    <label><input type="checkbox" class="inline" value="9"/>Additional Courses</label>
+
+
+ 
+
+
+
+  </fieldset>
+  <fieldset>
+      <label>Any comments or suggestions?:</label>
+      <textarea>Enter any comments or suggestions?:</textarea>
+  </fieldset>
+ <label><input type="submit" id="submit"></label>
+  </submit>
+
+</form>
+  </body>
+</html>
