@@ -1,0 +1,135 @@
+<!DOCTYPE html> <!--Document Type Node--->
+<html lang="en"></html><!--Element Type Node-->
+    <head>
+        <title>
+            Document Object Model
+        </title>
+    </head>
+    <body><!--Element Type Node-->
+        <!--Modifying HTML Elements -->
+        <ul id="menu">
+            <li>Home</li>
+            <li>About</li>
+            <li>Blog</li>
+        </ul>
+
+        <ul id="menu2">
+            <li>Home</li>
+            <li>About</li>
+            <li>Blog</li>
+        </ul>
+
+
+        <ul id="menu3">
+            <li>Home</li>
+            <li>About</li>
+            <li>Blog</li>
+        </ul>
+
+
+        <ul id="menu4">
+            <li>Home</li>
+            <li>About</li>
+            <li>Blog</li>
+        </ul>
+        
+        <ul id="menu5">
+            <li>YOo</li>
+            <li>What</li>
+            <li>Is Cooking</li>
+        </ul>
+    
+    <script>
+        //createElement()- to create an element in 
+        //HTML we can use the createElement()funtion 
+        //The document.createElement accepts an HTML tag name 
+        //and returns a new NOde with the Element type.
+
+       let div1 = document.createElement("div");
+       div1.innerHTML = "<p>Welcome</p>";
+       div1.id = "title";
+
+       div1.className = "big"
+
+       document.body.appendChild(div1);
+       console.log(div1);
+
+       //appendChild()- Used to add a node to the end 
+       //of the list of child nodes of a specified parent node
+       //Can be used to move an exisitng child
+       //node to a new position in the document
+
+       let menu = document.getElementById("menu");
+       console.log(menu)
+     
+
+       let list = document.createElement("li");
+       list.innerHTML = "Contact";
+       menu.appendChild(list);
+
+       console.log("menu");
+
+
+
+         //textContent()- used to get the text 
+         //content of a node and its descendants.
+         //innnerHTML can be used too but wont show text that is hidden with CSS
+
+         let menu2 = document.getElementById("menu2");
+         console.log(menu2.textContent);
+
+         menu2.textContent = "Hello";
+
+         //innerHTML- Used to add HTML code on the webPage
+
+         menu2.innerHTML = "<h1>Hello</h1>"
+
+         //after - Used to insert one or two nodes after the element
+         //Syntax:Element.after(node)
+
+        //apennd() - Used to add multiple items to an element
+        //Syntax:parentNode.append(newNode)
+        
+        //prepend() - use
+        //Syntax: parentNode.prepend(newNodes)
+
+        //insertAdjacentHTML
+        //Syntax; element.insertAdjacent(positionName, text)
+        let menu3 = document.getElementById("menu3")
+
+        menu3.insertAdjacentHTML("beforeend", "<li>Information Page</li>");
+        menu3.insertAdjacentHTML("afterbegin", "<li>Information Page</li>");
+
+        //replaceChild()- used to replace elements with specfic name with another
+        //Syntax: parentNode.replaceChild(newChild, oldChild)
+
+        //cloneNode_ Used to clone different elements.
+
+        let newNode = menu3.cloneNode();
+        console.log(newNode)
+
+        //removeChild()
+        //Syntax:parentNode.removeChild(childNode)
+        var menu4 = document.getElementById("menu4");
+
+        menu4.removeChild(menu4.lastElementChild);
+        menu4.removeChild(menu4.firstElementChild);
+
+        //insertBefore() is used to 
+        //insert a new node before an existing node as a child n
+
+        let menu5 = document.getElementById("menu5");
+        menu5.insertBefore("<p>YO WHATS UP</p>",menu5.firstElementChild)
+
+
+
+
+
+
+        
+
+
+    
+    </script>
+    </body>
+    </html>
