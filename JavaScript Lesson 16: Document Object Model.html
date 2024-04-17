@@ -1,0 +1,57 @@
+<!DOCTYPE html> <!--Document Type Node--->
+<html lang="en"></html><!--Element Type Node-->
+    <head>
+        <title>
+            Document Object Model
+        </title>
+    </head>
+    <body><!--Element Type Node-->
+        <!--DOM Traversal-->
+        <div class="title">
+            <p class="txt">Welcome to my website </p>
+        </div>
+
+        <div class="container">
+            <p>Welcome to my Website 1</p>
+            <p>Welcome to my Website 2</p>
+            <p>Welcome to my Website 3</p>
+            <p>Welcome to my Website 4</p>
+        </div>
+
+        <div class="cont">
+            <p class="firstWord">Welcome</p>
+            <p class="secondWord">Welcome</p>
+            <p class="thirdWord">Welcome</p>
+            <p class="fourthword">Welcome</p>
+        </div>
+        
+    
+    <script>
+        //Getting parent node 
+        let txt = document.querySelector(".txt");
+        //Displays the 
+        console.log(txt.parentNode);
+        //Getting child node
+        let parent = document.querySelector(".container");
+        //Displays the first element in the container
+        console.log(parent.firstElementChild);
+        //Getting all the child nodes
+        console.log(parent.lastElementChild);
+        //Getting all the child nodes 
+        console.log(parent.childNodes);
+        //Selecting the next siblings
+        let second = document.querySelector(".secondWord");
+        console.log(second.previousElementSibling);
+        //How to select the next siblings
+        console.log(second.nextElementSibling);
+         
+
+        
+
+
+
+    
+    </script>
+    </body>
+    </html>
+        
