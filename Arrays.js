@@ -71,6 +71,10 @@ var newLength = numbers.unshift(1,2);
 console.log(numbers); //Output: [1,2,3,4,5]
 console.log(newLength); //Output;5 
 
-
+//Nested Arrays
+const fruits = [["Apples", 4 ],["Banana", 3],["Carrot", 5]]
+//Acessing Elements within this Array 
+console.log(fruits[0][0])//Prints out the element banana
+//How to shift,pop, unshift, and push elements in a nested arrays
 
 
